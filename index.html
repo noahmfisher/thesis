@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+
+
+
+<div class="container">
+  <div class="side">
+    <div class="button" onclick="openCity('streamOne')"><img id="motionjpeg" class="motionjpegbutton" src="http://157.157.138.235/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamTwo')"><img id="motionjpeg" class="motionjpegbutton" src="http://81.83.10.9:8001/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamThree')"><img id="motionjpeg" class="motionjpegbutton" src="http://81.209.111.165:8081/cam_1.cgi" /></div>
+    <div class="button" onclick="openCity('streamFour')"><img id="motionjpeg" class="motionjpegbutton" src="http://208.72.70.172/mjpg/1/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamFive')"><img id="motionjpeg" class="motionjpegbutton" src="http://73.135.167.185:8081/out.jpg?q=75&id=0.9235392974122573&r=1581967046557&p=wit&u=wit" /></div>
+    <div class="button" onclick="openCity('streamSix')"><img id="motionjpeg" class="motionjpegbutton" src="http://162.245.149.145/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamSeven')"><img id="motionjpeg" class="motionjpegbutton" src="http://174.6.126.86/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamEight')"><img id="motionjpeg" class="motionjpegbutton" src="http://78.27.189.141/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamNine')"><img id="motionjpeg" class="motionjpegbutton" src="http://24.197.59.198/mjpg/video.mjpg" /></div>
+    <div class="button" onclick="openCity('streamTen')"><img id="motionjpeg" class="motionjpegbutton" src="http://66.57.117.166:8000/mjpg/video.mjpg" /></div>
+  </div>
+  <div class="main">
+    <div id="streamOne" class="w3-container city">
+      <img id="motionjpeg" class="motionjpeg streamOne" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamTwo" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamTwo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamThree" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamThree" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamFour" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamFour" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamFive" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamFive" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+    <div id="streamSix" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamSix" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamSeven" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamSeven" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamEight" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamEight" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamNine" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamNine" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+
+    <div id="streamTen" class="w3-container city" style="display:none">
+      <img id="motionjpeg" class="motionjpeg streamTen" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" />
+    </div>
+  </div>
+</div>
+
+
+<!-- <script src="motionjpeg.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    //Using jQuery for simplicity
+
+    // $(document).ready(function() {
+    //     motionjpeg("#motionjpeg"); // Use the function on the image
+    // });
+
+    function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+      document.getElementById(cityName).style.display = "block";
+
+    };
+
+    window.onkeypress = function(event) {
+       if (event.keyCode == 48) {
+          openCity('streamOne');
+       } else if (event.keyCode == 49) {
+          openCity('streamTwo');
+       } else if (event.keyCode == 50) {
+          openCity('streamThree');
+       } else if (event.keyCode == 51) {
+          openCity('streamFour');
+       } else if (event.keyCode == 52) {
+          openCity('streamFive');
+       } else if (event.keyCode == 53) {
+          openCity('streamSix');
+       } else if (event.keyCode == 54) {
+          openCity('streamSeven');
+       } else if (event.keyCode == 55) {
+          openCity('streamEight');
+       } else if (event.keyCode == 56) {
+          openCity('streamNine');
+       } else if (event.keyCode == 57) {
+          openCity('streamTen');
+       };
+    };
+
+
+
+</script>
+
+<!-- <div class="grid-container">
+  <div class="AA">
+
+  </div>
+  <div class="AB">
+    <iframe class = "screen" src="http://81.83.10.9:8001/mjpg/video.mjpg"></iframe>
+  </div>
+  <div class="AC">
+    <iframe class = "screen" src="http://157.157.138.235/mjpg/video.mjpg"></iframe>
+  </div>
+  <div class="AD">
+    <iframe class = "screen" src="http://81.209.111.165:8081/cam_1.cgi"></iframe>
+  </div>
+</div> -->
+
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
